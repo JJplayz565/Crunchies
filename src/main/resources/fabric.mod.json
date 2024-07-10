@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "crunchies",
+	"version": "${version}",
+	"name": "Crunchies",
+	"description": "Adds many foods to the game",
+	"authors": [
+		"JJplayz565"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/crunchies/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"jjplayz565.crunchies.Crunchies"
+		],
+		"client": [
+			"jjplayz565.crunchies.CrunchiesClient"
+		]
+	},
+	"mixins": [
+		"crunchies.mixins.json",
+		{
+			"config": "crunchies.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
