@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "": {
+            "model": "crunchies:block/slicer",
+            "uvlock": true
+        }
+    }
+}
