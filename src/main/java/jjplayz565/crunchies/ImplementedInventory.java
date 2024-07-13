@@ -4,6 +4,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.recipe.input.RecipeInput;
 import net.minecraft.util.collection.DefaultedList;
 
 /**
@@ -11,7 +12,7 @@ import net.minecraft.util.collection.DefaultedList;
  *
  * Originally by Juuz
  */
-public interface ImplementedInventory extends Inventory {
+public interface ImplementedInventory extends Inventory, RecipeInput{
 
     /**
      * Retrieves the item list of this inventory.
@@ -23,7 +24,7 @@ public interface ImplementedInventory extends Inventory {
      * Creates an inventory from the item list.
      */
     static ImplementedInventory of(DefaultedList<ItemStack> items) {
-        return () -> items;
+        return () -> items;  //Here is the error --> The target type of this expression must be a functional interface
     }
     
     /**

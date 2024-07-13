@@ -34,4 +34,18 @@ public class SlicerBlockEntity extends BlockEntity implements ImplementedInvento
 
         Inventories.readNbt(nbt, inventory, wrapper);
     }
+
+    //Still have these in because I'm tryna sort out ImplementedInventory first
+
+    @Override
+    public int getSize() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getSize'");
+    }
+
+    @Override
+    public ItemStack getStackInSlot(int slot) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getStackInSlot'");
+    }
 }
